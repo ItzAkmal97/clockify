@@ -57,10 +57,7 @@ function Clockify(): JSX.Element {
     const now = new Date();
     setDate("Today");
 
-    const options = { hour: "2-digit", minute: "2-digit" } as const;
-    const timeString = now
-      .toLocaleTimeString([], options)
-      .replace(/:\d\d$/, "");
+    const timeString = now.toLocaleTimeString()
     setInputTime(timeString);
     setIsRunning(true);
   };
